@@ -44,3 +44,10 @@ content:
       - name: body
         label: 본문
         type: rich-text
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
