@@ -1,0 +1,44 @@
+media:
+  input: assets/img
+  output: /assets/img
+
+content:
+  - name: posts
+    label: 공지사항
+    type: collection
+    path: _posts
+    format: yaml-frontmatter
+
+    filename: "{year}-{month}-{day}-{primary}.md"
+
+    view:
+      fields: [title, date]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+
+    fields:
+      - name: title
+        label: 제목
+        type: string
+        required: true
+
+      - name: date
+        label: 작성일
+        type: date
+        options:
+          format: yyyy-MM-dd
+
+      - name: subtitle
+        label: 부제목
+        type: string
+
+      - name: tags
+        label: 태그
+        type: string
+
+      - name: body
+        label: 본문
+        type: rich-text
