@@ -9,7 +9,9 @@ content:
     path: _posts
     format: yaml-frontmatter
 
-    filename: "{year}-{month}-{day}-{primary}.md"
+    filename:
+      template: "{year}-{month}-{day}-{primary}.md"
+      field: create
 
     view:
       fields: [title, date]
