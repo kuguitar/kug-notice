@@ -4,7 +4,7 @@ media:
 
 content:
   - name: posts
-    label: 공지사항
+    label: 전체글
     type: collection
     path: _posts
     format: yaml-frontmatter
@@ -32,10 +32,6 @@ content:
         type: date
         options:
           format: yyyy-MM-dd
-
-      - name: subtitle
-        label: 부제목
-        type: string
 
       - name: tags
         label: 태그
