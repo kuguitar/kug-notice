@@ -265,3 +265,29 @@ footer {
   padding: 0.4rem 0.25rem;
   line-height: 1.4;
 }
+
+/* --- 본문 제목 크기 (글/페이지 본문) --- */
+.blog-post h1 { font-size: 1.6rem; }
+.blog-post h2 { font-size: 1.35rem; }
+.blog-post h3 { font-size: 1.15rem; }
+.blog-post h1,
+.blog-post h2,
+.blog-post h3 {
+  line-height: 1.35;
+  margin-top: 1.75rem;
+  margin-bottom: 0.6rem;
+}
+
+/* --- 본문 링크: 점선 밑줄 --- */
+.blog-post a {
+  color: var(--ku-crimson);
+  text-decoration: underline dotted;
+  text-decoration-color: #D98A9C;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.2em;
+}
+.blog-post a:hover {
+  color: var(--ku-crimson-light);
+  text-decoration-style: solid;
+  text-decoration-color: var(--ku-crimson-light);
+}

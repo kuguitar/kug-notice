@@ -15,3 +15,4 @@ beautiful-jekyll-theme-*.gem
 # local dev
 vendor/
 .bundle/
+_config_local.yml
