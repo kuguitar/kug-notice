@@ -22,6 +22,7 @@ author: kuguitar
 navbar-links:
   전체글: "/"
   태그: "tags"
+  지난 공지: "archive"
   소개: "aboutme"
 
 ################
@@ -265,7 +266,6 @@ timezone: "Asia/Seoul"
 markdown: kramdown
 highlighter: rouge
 permalink: /:slug/
-paginate: 5
 
 kramdown:
   input: GFM

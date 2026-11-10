@@ -4,7 +4,13 @@ layout: page
 
 {{ content }}
 
-{% assign posts = paginator.posts | default: site.posts %}
+{% comment %} 지난 공지(archived: true)는 전체글에서 빼고, archive 페이지(page.archive: true)에서만 보여줌 {% endcomment %}
+{% if page.archive %}
+  {% assign posts = site.posts | where: "archived", true %}
+{% else %}
+  {% assign posts = site.posts | where_exp: "post", "post.archived != true" %}
+{% endif %}
+{% if posts.size == 0 %}<p class="text-muted">글이 없습니다.</p>{% endif %}
 
 <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
 <ul class="posts-list list-unstyled" role="list">

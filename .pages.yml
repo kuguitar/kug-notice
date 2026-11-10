@@ -38,6 +38,11 @@ content:
         type: string
         description: "글 주소에 쓰일 번호나 짧은 이름 (예: 3 → notice.kuguitar.com/3/). 다른 글과 겹치지 않게. 비우면 파일 이름으로 자동 생성"
 
+      - name: archived
+        label: 지난 공지
+        type: boolean
+        description: "체크하면 전체글 목록에서 빠지고 '지난 공지' 페이지에만 나옵니다"
+
       - name: tags
         label: 태그
         type: string
