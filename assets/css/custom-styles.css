@@ -1,0 +1,98 @@
+/* 고려대 고전기타부 교우회 공지 — 커스텀 스킨 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+
+:root {
+  --body-font: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  --header-font: var(--body-font);
+  --ku-crimson: #8B0029;
+  --ku-crimson-light: #C4123E;
+  --ku-cream: #F6F2EE;
+}
+
+body {
+  word-break: keep-all;
+  letter-spacing: -0.01em;
+  line-height: 1.75;
+}
+
+/* --- 네비게이션 바 --- */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+  font-weight: 700;
+}
+.navbar-custom .navbar-nav .nav-link:hover,
+.navbar-custom .navbar-brand:hover {
+  color: #FFD6DF;
+}
+.navbar-custom .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.navbar-custom .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* --- 페이지/글 헤더 --- */
+.intro-header .page-heading h1,
+.intro-header .post-heading h1 {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.intro-header .page-heading hr.small {
+  border-color: var(--ku-crimson);
+  border-width: 3px;
+  width: 3rem;
+}
+.post-preview .post-meta,
+.post-heading .post-meta {
+  font-style: normal;
+  font-size: 0.95rem;
+}
+
+/* --- 글 목록 --- */
+.post-preview {
+  border-bottom: 1px solid #E5E5E5;
+}
+.post-preview .post-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.post-preview .post-subtitle {
+  font-size: 1.05rem;
+  color: #666;
+}
+
+/* --- 태그 --- */
+.blog-tags a {
+  color: var(--ku-crimson);
+}
+.blog-tags a:hover {
+  color: var(--ku-crimson-light);
+  text-decoration: underline;
+}
+
+/* --- 본문 --- */
+.blog-post {
+  font-size: 1.0625rem;
+}
+.blog-post h2, .blog-post h3 {
+  font-weight: 700;
+}
+blockquote {
+  font-style: normal;
+  color: #555;
+}
+
+/* --- 푸터 --- */
+footer {
+  border-top: 1px solid #E5E5E5;
+}
+
+/* --- 글 목록 미리보기: 3줄까지 --- */
+.post-preview .post-excerpt {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  margin: 0 0 0.25rem;
+}

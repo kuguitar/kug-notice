@@ -1,16 +1,10 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: 소개
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+고려대학교 고전기타부 교우회의 공지사항을 모아두는 임시 게시판입니다.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+현재 공지는 주로 밴드를 통해 전달되고 있지만, 밴드는 로그인이 필요하고 지난 글을 찾아보기 어려워 별도의 게시판을 운영합니다.
 
-What else do you need?
-
-### My story
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+추후 교우회 홈페이지가 정비되면 그쪽으로 통합될 예정입니다.

@@ -20,8 +20,9 @@ author: kuguitar
 ###############################################
 
 navbar-links:
-  Home: "/"
-  Tags: "tags"
+  전체글: "/"
+  태그: "tags"
+  소개: "aboutme"
 
 ################
 # --- Logo --- #
@@ -83,7 +84,7 @@ round-avatar: true
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: This website is a virtual proof that I'm awesome
+rss-description: 고려대학교 고전기타부 교우회 공지사항
 
 ###########################
 # --- General options --- #
@@ -134,16 +135,16 @@ navbar-var-length: false
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
 page-col: "#FFFFFF"
-text-col: "#404040"
-link-col: "#008AFF"
-hover-col: "#0085A1"
-navbar-col: "#EAEAEA"
-navbar-text-col: "#404040"
-navbar-border-col: "#DDDDDD"
-footer-col: "#EAEAEA"
+text-col: "#333333"
+link-col: "#8B0029"
+hover-col: "#C4123E"
+navbar-col: "#8B0029"
+navbar-text-col: "#FFFFFF"
+navbar-border-col: "#6E0020"
+footer-col: "#F6F2EE"
 footer-text-col: "#777777"
-footer-link-col: "#404040"
-footer-hover-col: "#0085A1"
+footer-link-col: "#8B0029"
+footer-hover-col: "#C4123E"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
@@ -153,11 +154,11 @@ footer-hover-col: "#0085A1"
 #page-img: "/assets/img/bgimage.png"
 
 # Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
-#mobile-theme-col: "#0085A1"
+mobile-theme-col: "#8B0029"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
-#site-css:
-#  - "/assets/css/custom-styles.css"
+site-css:
+  - "/assets/css/custom-styles.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
 #site-js:
@@ -247,7 +248,7 @@ footer-hover-col: "#0085A1"
 ################
 
 # Ruby Date Format to show dates of posts
-date_format: "%Y-%m-%d"
+date_format: "%Y년 %-m월 %-d일"
 
 # Facebook App ID
 #fb_app_id: ""
@@ -256,11 +257,14 @@ date_format: "%Y-%m-%d"
 # --- You don't need to touch anything below here (but you can if you want) --- #
 #################################################################################
 
+# Site language
+language: ko
+
 # Output options (more information on Jekyll's site)
 timezone: "Asia/Seoul"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year-:month-:day-:title/
+permalink: /:slug/
 paginate: 5
 
 kramdown:

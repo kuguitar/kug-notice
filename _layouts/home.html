@@ -47,11 +47,11 @@ layout: page
       </a>
 
       {% if post.author %}
-        <span>By <strong>{{ post.author | strip_html }}</strong></span>
+        <span>작성자 <strong>{{ post.author | strip_html }}</strong></span>
       {% endif %}
       <p class="post-meta">
         {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
-        Posted on {{ post.date | date: date_format }}
+        {% include kdate.html date=post.date %}
       </p>
 
       {% if thumbnail != "" %}
@@ -72,18 +72,17 @@ layout: page
       {% endif %}
 
       <div class="post-entry">
-        {% assign excerpt_length = site.excerpt_length | default: 50 %}
-        {{ post.excerpt | strip_html | truncatewords: excerpt_length }}
-        {% assign excerpt_word_count = post.excerpt | number_of_words %}
-        {% if post.content != post.excerpt or excerpt_word_count > excerpt_length %}
-          <a href="{{ post.url | absolute_url }}" class="post-read-more">[Read&nbsp;More]</a>
+        {% assign preview_text = post.content | strip_html | normalize_whitespace %}
+        <p class="post-excerpt">{{ preview_text | truncate: 400 }}</p>
+        {% if preview_text.size > 90 %}
+          <a href="{{ post.url | absolute_url }}" class="post-read-more">[더보기]</a>
         {% endif %}
       </div>
       {% endunless %}
 
       {% if site.feed_show_tags != false and post.tags.size > 0 %}
       <div class="blog-tags">
-        <span>Tags:</span>
+        <span>태그:</span>
         <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
         <ul class="d-inline list-inline" role="list">
           {% for tag in post.tags %}
@@ -106,14 +105,14 @@ layout: page
   <li class="page-item previous">
     <a class="page-link" href="{{ paginator.previous_page_path | absolute_url }}">
       <i class="fas fa-arrow-left" alt="Newer Posts"></i>
-      <span class="d-none d-sm-inline-block">Newer Posts</span>
+      <span class="d-none d-sm-inline-block">최신 글</span>
     </a>
   </li>
   {% endif %}
   {% if paginator.next_page %}
   <li class="page-item next">
     <a class="page-link" href="{{ paginator.next_page_path | absolute_url }}">
-      <span class="d-none d-sm-inline-block">Older Posts</span>
+      <span class="d-none d-sm-inline-block">이전 글</span>
       <i class="fas fa-arrow-right" alt="Older Posts"></i>
     </a>
   </li>
