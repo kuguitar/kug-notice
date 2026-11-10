@@ -51,14 +51,17 @@ body {
 /* --- 글 목록 --- */
 .post-preview {
   border-bottom: 1px solid #E5E5E5;
+  padding: 1.25rem 0 !important;
 }
 .post-preview .post-title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
+  margin-bottom: 0.25rem;
 }
-.post-preview .post-subtitle {
-  font-size: 1.05rem;
-  color: #666;
+.post-preview .post-meta {
+  font-size: 0.8rem;
+  color: #A0A0A0;
+  margin: 0;
 }
 
 /* --- 태그 --- */
@@ -68,6 +71,32 @@ body {
 .blog-tags a:hover {
   color: var(--ku-crimson-light);
   text-decoration: underline;
+}
+/* 목록 화면 태그: 작은 원형 칩 */
+.post-preview .blog-tags {
+  margin-top: 0.5rem;
+}
+.post-preview .blog-tags > span {
+  display: none;
+}
+.post-preview .blog-tags .list-inline-item {
+  margin: 0 0.25rem 0.25rem 0;
+}
+.post-preview .blog-tags a {
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  padding: 0 0.6rem;
+  border: 1px solid #E3D3D7;
+  border-radius: 999px;
+  background: #FBF6F7;
+  opacity: 1;
+}
+.post-preview .blog-tags a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: var(--ku-crimson);
+  border-color: var(--ku-crimson);
 }
 
 /* --- 본문 --- */
@@ -95,4 +124,59 @@ footer {
   line-clamp: 3;
   overflow: hidden;
   margin: 0 0 0.25rem;
+}
+
+/* --- 글 목록: 게시판형 한 줄 (날짜 - 제목 - 태그) --- */
+.posts-list {
+  border-top: 2px solid var(--ku-crimson);
+}
+.post-preview {
+  padding: 0.7rem 0.25rem !important;
+}
+.post-preview article {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.post-preview .post-meta {
+  order: 1;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+.post-preview article > a {
+  order: 2;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.post-preview .post-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.post-preview .blog-tags {
+  order: 3;
+  flex: 0 0 auto;
+  margin: 0 !important;
+  white-space: nowrap;
+}
+.post-preview .blog-tags .list-inline-item {
+  margin-bottom: 0;
+}
+
+/* 좁은 화면: 날짜/태그 한 줄, 제목 아래 줄 */
+@media (max-width: 575px) {
+  .post-preview article {
+    flex-wrap: wrap;
+    row-gap: 0.2rem;
+  }
+  .post-preview article > a {
+    order: 3;
+    flex-basis: 100%;
+  }
+  .post-preview .blog-tags {
+    order: 2;
+  }
 }
