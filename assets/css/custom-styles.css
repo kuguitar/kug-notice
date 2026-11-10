@@ -180,3 +180,88 @@ footer {
     order: 2;
   }
 }
+
+/* --- 페이지 타이틀(전체글/태그/소개) 50% 축소 --- */
+.intro-header .page-heading h1 {
+  font-size: 1.5625rem;
+}
+@media (min-width: 768px) {
+  .intro-header .page-heading h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* --- 태그 페이지: 위 버튼, 아래 글 목록 --- */
+.tag-buttons {
+  margin-bottom: 1.5rem;
+}
+.tag-btn {
+  margin: 0 0.4rem 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--ku-crimson);
+  background: #fff;
+  border: 1px solid var(--ku-crimson);
+}
+.tag-btn:hover,
+.tag-btn.active {
+  color: #fff;
+  background: var(--ku-crimson);
+  border-color: var(--ku-crimson);
+}
+.tag-btn:focus {
+  box-shadow: none;
+}
+.tag-post-list {
+  border-top: 2px solid var(--ku-crimson);
+}
+.tag-post-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.7rem 0.25rem;
+  border-bottom: 1px solid #E5E5E5;
+}
+.tag-post-list .post-meta {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  color: #A0A0A0;
+}
+.tag-post-list a {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-col);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tag-post-list a:hover {
+  color: var(--hover-col);
+  text-decoration: none;
+}
+@media (max-width: 575px) {
+  .tag-post-list li {
+    flex-wrap: wrap;
+    row-gap: 0.2rem;
+  }
+  .tag-post-list a {
+    flex-basis: 100%;
+  }
+}
+
+/* --- 메뉴 글자(전체글/태그/소개): 사이트 제목(1.25rem)보다 조금 작게 --- */
+.navbar-custom .navbar-nav .nav-item {
+  font-size: 1.05rem;
+}
+
+/* --- 목록 줄간격 촘촘하게 (메인 목록 + 태그 페이지) --- */
+.post-preview {
+  padding: 0.4rem 0.25rem !important;
+  line-height: 1.4;
+}
+.tag-post-list li {
+  padding: 0.4rem 0.25rem;
+  line-height: 1.4;
+}
