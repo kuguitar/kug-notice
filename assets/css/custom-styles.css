@@ -291,3 +291,37 @@ footer {
   text-decoration-style: solid;
   text-decoration-color: var(--ku-crimson-light);
 }
+
+/* --- 본문 글자 꾸미기 색 --- */
+.blog-post strong,
+.blog-post b {
+  color: #1F4FD1;          /* 굵게: 진한 파랑 */
+  font-weight: 800;
+}
+.blog-post em,
+.blog-post i:not([class]) {
+  color: #4C9A6A;          /* 기울임: 연한 초록 */
+}
+.blog-post del,
+.blog-post s {
+  color: #D32F2F;          /* 취소선: 빨강 */
+  text-decoration-color: #D32F2F;
+}
+.blog-post :not(pre) > code {
+  color: #8B5A2B;          /* 인라인 코드: 갈색 */
+  background-color: #F5EEE6;
+}
+
+/* --- 본문 표: 줄무늬 없음, 헤더 음영, 촘촘하게 --- */
+.blog-post table tr,
+.blog-post table tr:nth-child(2n) {
+  background-color: transparent;
+}
+.blog-post table th {
+  background-color: #F3ECEE;
+}
+.blog-post table th,
+.blog-post table td {
+  padding: 0.2rem 0.75rem;
+  line-height: 1.4;
+}
