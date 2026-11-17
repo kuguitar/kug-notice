@@ -1,7 +1,7 @@
 {%- comment -%}
   상단 메뉴 = kuguitar.com 공용 메뉴 (https://kuguitar.com/js/nav.js · css/nav.css).
-  메뉴 항목은 kuguitar.com 저장소의 js/nav.js 에서 관리한다 — 여기서는 이 사이트 자체 메뉴만
-  data-local 로 넘긴다 (마지막 "공지사항" 드롭다운).
+  1단(고기부 공통 메뉴)은 kuguitar.com 저장소의 js/nav.js 에서 관리한다.
+  여기서는 이 사이트 자체 메뉴(2단)만 data-local 로 넘긴다 — 항목은 _config.yml 의 navbar-links.
 {%- endcomment -%}
 {%- capture local_items -%}
   [
@@ -16,7 +16,7 @@
   ]
 {%- endcapture -%}
 <link rel="stylesheet" href="https://kuguitar.com/css/nav.css">
-<header id="kug-header" data-local='{"label": "공지사항", "items": {{ local_items | strip | replace: ",]", "]" }}}'></header>
+<header id="kug-header" data-local='{"label": "교우회 공지사항", "href": {{ '/' | relative_url | jsonify }}, "items": {{ local_items | strip | replace: ",]", "]" }}}'></header>
 <script src="https://kuguitar.com/js/nav.js"></script>
 {%- comment -%} 테마 JS(beautifuljekyll.js)가 .navbar 를 찾으므로 숨은 자리표시자를 둔다 {%- endcomment -%}
 <div class="navbar" hidden style="display:none"></div>

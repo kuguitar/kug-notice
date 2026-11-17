@@ -325,3 +325,14 @@ footer {
   padding: 0.2rem 0.75rem;
   line-height: 1.4;
 }
+
+/* --- 상단 메뉴: kuguitar.com 공용 메뉴(_includes/nav.html) ---
+   공용 메뉴는 고정(fixed)이 아니라 문서 흐름 안에서 붙어 있는(sticky) 헤더라서,
+   테마가 고정 네비 높이만큼 주던 위쪽 여백을 줄인다. */
+.intro-header,
+.intro-header.big-img,
+nav.top-nav-short-permanent ~ header > .intro-header,
+nav.top-nav-short-permanent ~ header > .intro-header.big-img {
+  margin-top: 0;
+}
+.intro-header:not(.big-img) { padding-top: 2.5rem; }
